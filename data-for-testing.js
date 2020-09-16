@@ -1,20 +1,20 @@
 export const listItemData = [
   {
-    by: 'Deepak DK',
     key: 0,
-    title: 'Atomic Habits',
-    publisher: 'Penguin',
-    categories: 'Business & Economics',
-    description:'Over 1 million copies sold! Tiny Changes, Remarkable Results No '
-   
+    display_name: 'Deepak DK',
+    category_name: 'Atomic Habits Penguin',
+    image_uri: 'https://react.semantic-ui.com/images/wireframe/image.png',
+    attributes: 'Penguin',
+    description: 'Over 1 million copies sold! Tiny Changes, Remarkable Results No',
+    spec_parameters: { 'Penguin': 0 },
   },
   {
-    by: 'Sangha',
     key: 1,
-    title: 'Atomic Habits Sangha',
+    display_name: 'Sangha',
+    category_name: 'Atomic Habits Sangha',
+    image_uri: 'https://react.semantic-ui.com/images/wireframe/image.png',
     publisher: 'Penguin Sangha',
-    categories: 'Business & Economics & Sangha',
-    description:'Over 1 million copies sold! Tiny Changes, Remarkable Results No & Sangha'
-    
+    description: 'Over 1 million copies sold! Tiny Changes, Remarkable Results No & Sangha',
+    spec_parameters: { 'Shangha': 0 },
   }
 ];

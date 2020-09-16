@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-// Default API will be your root
-// const baseURL = process.env.URL;
-
 const api_key= 'here your api key will come'
 
 class Api {

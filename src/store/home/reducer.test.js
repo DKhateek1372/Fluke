@@ -1,47 +1,39 @@
-import libraryManagementReducer from './reducer';
-import { libraryManagementAction } from './actions';
-import listItemData from '../../../data-for-testing';
+import cubytCategoriesReducer from './reducer';
+import { CubytCategoriesAction } from './actions';
 
 const initialState = {
   loading: true,
-  libraryData: [],
-      bookDetails:[],
-      addBooks:[],
-      borrowedBooks: [],
-      myBooks :[]   
+  cubytCategories :[]
 };
 
-describe('libraryManagementReducer reducer', () => {
+describe('cubytCategoriesReducer reducer', () => {
  
   it('returns the initial state', () => {
-    expect(libraryManagementReducer(undefined, {})).toEqual({
+    expect(cubytCategoriesReducer(undefined, {})).toEqual({
       loading: true,
-      libraryData: [],
-      bookDetails:[],
-      addBooks:[],
-      borrowedBooks: [],
-      myBooks :[]   
+      cubytCategories: [],
+ 
     });
   });
 
   it('should return the initial state', () => {
-    expect(libraryManagementReducer(initialState, { type: libraryManagementAction.FETCH_BOOKS_DATA_REQUEST})).toEqual({
+    expect(cubytCategoriesReducer(initialState, { type: CubytCategoriesAction.FETCH_CUBYT_CATEGORY_SUCCESS})).toEqual({
       ...initialState,
       loading: true,
     });
   });
 
   it('should return the updated data state', () => {
-    expect(libraryManagementReducer(initialState,{
-        type: libraryManagementAction.FETCH_BOOKS_DATA_SUCCESS,
+    expect(cubytCategoriesReducer(initialState,{
+        type: CubytCategoriesAction.FETCH_CUBYT_CATEGORY_SUCCESS,
      })).toEqual({
       loading: false,
-      libraryData: listItemData,
+      cubytCategories :[]
     });
   });
 
   it('handles failure', () => {
-    expect(libraryManagementReducer(initialState, { type: libraryManagementAction.FETCH_BOOKS_DATA_ERROR  })).toEqual({
+    expect(cubytCategoriesReducer(initialState, { type: CubytCategoriesAction.FETCH_CUBYT_CATEGORY_ERROR  })).toEqual({
       ...initialState,
       loading: true,
       errors: '',

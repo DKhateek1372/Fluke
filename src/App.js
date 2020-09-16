@@ -3,9 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Route } from 'react-router-dom';
-import books from './container/books';
-import bookDetails from './container/bookDetails';
-import userBookList from './container/userBookList';
+import Fluke from './container/Fluke';
 import {store, persistor} from './store/configureStore';
 import './App.css';
 
@@ -14,9 +12,7 @@ function App() {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-         <Route exact path="/" component={books}/>
-         <Route exact path="/bookDetails" component={bookDetails}/>
-         <Route exact path="/my-book-list" component={userBookList}/>
+         <Route exact path="/" component={Fluke}/>
         </BrowserRouter>
       </PersistGate>
     </Provider>
